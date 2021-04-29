@@ -1,0 +1,115 @@
+/* carousel */
+.carousel {
+  height: 36rem;
+}
+.carousel-inner {
+  max-height: 100%;
+}
+.carousel-caption {
+  right: 0px !important;
+  bottom: 189px;
+  left: 15%;
+  text-align: left;
+}
+button.btn.btn-outline-secondary {
+  border-color: snow;
+  color: snow;
+  border-radius: 20px;
+}
+.carousel-caption.d-none.d-md-block h5.lighter, p{
+  color: #6B6361;
+}
+/* content */
+a:hover{
+  text-decoration: none;
+}
+div.mt-content {
+  margin-top: 6em;
+}
+/* Introduction */
+ul.list-inline.gallery-tap li.list-inline-item {
+      padding: 33px 25px 0px 25px;
+  }
+  .list-inline-item:not(:last-child, :first-child) {
+    border-top: 1px solid orange;
+  }
+
+  .list-inline-item a:focus{
+      border-radius: 5px;
+      border: 1px solid gray;
+      text-decoration: none;
+      color: black;
+      font-weight: 600;
+      padding: 5px 7px;
+  }
+  /* ads */
+  .col-lg-12.col-12.img {
+    height: 31rem;
+}
+/* point */
+.col-sm-3.p-2.col-6.title.d-block.text-center.text-lg-center i.fa {
+  color: #f31a40;
+}
+.container-fluid.services.mt-content {
+  border: 1px solid;
+  height: 22rem;
+}
+/* services */
+.container-fluid.services.mt-content {
+  border: none;
+  height: 22rem;
+}
+.col-lg-4.col-12.banner-services.d-flex.justify-content-center.align-items-center {
+  position: relative;
+  background-image: url(https://images.pexels.com/photos/1029757/pexels-photo-1029757.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+  /* position: relative; */
+  /* padding-top: 46%; */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.col-lg-4.col-12.banner-services.d-flex.justify-content-center.align-items-center::after {
+  content: "";
+  position: absolute;
+  background-color: #4b464657;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+
+.tt-services.d-block.text-center {
+    z-index: 100;
+    color: snow;
+}
+.d-block.text-center p {
+  font-size: 12px;
+}
+.tt-services.d-block.text-center p {
+    color: snow;
+}
+a.d-block.text-center i.fa {
+  color: #d40505fa;
+  font-size: 20px;
+  line-height: 36px;
+}
+/* team */
+
+.card-group.team-ct {
+    height: 28.5rem;
+    border: 1px solid;
+}
+
+.card-group.team-ct div.card {
+    max-height: -webkit-fill-available;
+}
+
+.card-group.team-ct div.card img {
+    height: 77%;
+}
+.card-body {
+  line-height: 8px;
+  padding: 4px;
+}
+
