@@ -53,7 +53,7 @@
        </div>
      </nav> 
      <!-- end nave -->
-     <div id="my-carousel" class="carousel slide" data-ride="carousel">
+     <div id="my-carousel" class="carousel carousel-parent slide" data-ride="carousel">
        <ol class="carousel-indicators">
          <li class="active" data-target="#my-carousel" data-slide-to="0" aria-current="location"></li>
          <li data-target="#my-carousel" data-slide-to="1"></li>
@@ -62,7 +62,7 @@
        <div class="carousel-inner">
          <div class="carousel-item active">
            <img class="h-100 d-block w-100" src="img/cr1.jpeg" alt="">
-           <div class="carousel-caption d-none d-md-block">
+           <div class="carousel-caption carousel-bn d-none d-md-block">
              <h5 class="lighter">Hello & Welcome</h5>
              <h1>WE HAVE MAGIC</h1>
              <p>AND SUPER CRAZY DESIGN SKILLS</p>
@@ -109,11 +109,16 @@
      </div>
      <!-- end carousel -->
      <div class="container mt-content intro d-block text-center ">
-       <h3 class="bold">OUR STORY</h3>
-       <P class="text-Italic">We're branding & digital studio from New York</P>
+       <div class="row">
+        <div class="col-lg-12 tt-team text-center" >
+          <div class="h4 text-uppercase">OUR STORY</div>
+          <p class="font-Italic">We're branding & digital studio from New York</p>
+          <div class="inline"></div>
+        </div>
+       </div>
        <div class="row">
         <div class="col-lg-12 gallery_filter_tab">
-          <ul class="list-inline gallery-tap">
+          <ul class="list-inline gallery-tap text-center">
             <li class="list-inline-item">
               <a href="javascript:void(0);" class="filter-button active" data-filter="about">ABOUT</a>	
             </li>
@@ -280,7 +285,7 @@
             <div class="card-body text-center">
               <h5 class="card-title text-uppercase">Joihn thomSON</h5>
               <p class="card-text">CEO</p>
-              <p class="card-text  d-flex justify-content-around">
+              <p class="card-text m-auto w-50  d-flex justify-content-around">
                 <i class="fa fa-facebook" ></i>
                 <i class="fa fa-twitter"></i>
                 <i class="fa fa-google-plus"></i>
@@ -292,7 +297,7 @@
             <div class="card-body text-center">
               <h5 class="card-title text-uppercase">Joihn thomSON</h5>
               <p class="card-text">CEO</p>
-              <p class="card-text  d-flex justify-content-around">
+              <p class="card-text m-auto w-50  d-flex justify-content-around">
                 <i class="fa fa-facebook" ></i>
                 <i class="fa fa-twitter"></i>
                 <i class="fa fa-google-plus"></i>
@@ -304,7 +309,7 @@
             <div class="card-body text-center">
               <h5 class="card-title text-uppercase">Joihn thomSON</h5>
               <p class="card-text">CEO</p>
-              <p class="card-text  d-flex justify-content-around">
+              <p class="card-text m-auto w-50  d-flex justify-content-around">
                 <i class="fa fa-facebook" ></i>
                 <i class="fa fa-twitter"></i>
                 <i class="fa fa-google-plus"></i>
@@ -314,5 +319,390 @@
         </div>
        </div>
      </div>
+     <!-- end team -->
+     <div id="vd-carousel mt-content" class="carousel carousel-intro slide" data-interval="false">
+       <ol class="carousel-indicators">
+         <li class="active" data-target="#vd-carousel" data-slide-to="0" aria-current="location"></li>
+         <li data-target="#vd-carousel" data-slide-to="1"></li>
+       </ol>
+       <div class="carousel-inner vd-inner">
+         <div class="carousel-item vd-item active">
+           <img class="d-block h-30 w-100" src="img/cr1.jpeg" alt="">
+           <div class="carousel-caption d-block">
+            <p type="button" data-toggle="modal" data-src="https://vod-progressive.akamaized.net/exp=1619684941~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3821%2F15%2F394106385%2F1672687082.mp4~hmac=df046b66579d924bcc64c8ec62b91961b2590f13940ec033a30aaabcc8769fb5/vimeo-prod-skyfire-std-us/01/3821/15/394106385/1672687082.mp4?filename=production+ID%3A3816531.mp4" 
+            class="video-btn" data-target="#myModal">
+            <i class=" fa fa-play-circle-o fa-lg"></i>
+           </p>
+             <h5 class=" text-uppercase">introducing</h5>
+             <p>Check out our video prisentation</p>
+            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                  <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>        
+                    <!-- 16:9 aspect ratio -->
+                    <div class="embed-responsive embed-responsive-16by9">
+                      <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div> 
+            
+      <script>
+
+        $(document).ready(function() {
+        var $videoSrc;  
+        $('.video-btn').click(function() {
+            $videoSrc = $(this).data( "src" );
+        });
+        console.log($videoSrc);
+    
+          
+        $('#myModal').on('shown.bs.modal', function (e) {
+            
+        $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+        })
+    
+        $('#myModal').on('hide.bs.modal', function (e) {
+            // a poor man's stop video
+            $("#video").attr('src',$videoSrc); 
+        }) 
+    
+        });
+    
+    
+      </script>
+           </div>
+         </div>
+         <div class="carousel-item vd-item">
+           <img class="d-block w-100" src="img/cr2.jpeg" alt="">
+           <div class="carousel-caption d-none d-md-block">
+             <h5>Title</h5>
+             <p>Text</p>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- end video -->
+     <div class="container mt-content alt">
+      <div class="row">
+        <div class="col-lg-12 tt-team text-center" >
+          <h4 class="text-uppercase">alt services</h4>
+          <p class="font-Italic">We provide a complete list of best digital services</p>
+          <div class="inline"></div>
+        </div>
+      </div>
+      <div class="row text-center mt-2">
+        <p class="col-lg-2"></p>
+        <p class="col-lg-8">Laudantium montes dapibus dui eligendi do!
+           Nemo sapien wisi cupidatat porro dapibus vulputate nostrum, 
+           cursus ridiculus interdum ? 
+          </p>
+        <p class="col-lg-2"></p>
+      </div>
+      <div class="row mt-4">
+        <div class="col-lg-3 col-12">
+          <div class="row">
+            <div class="col-12 d-flex">
+              <i class="fa fa-coffee"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Branding</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+            <div class="col-12 d-flex">
+              <i class="fa fa-desktop"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Web Design</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+            <div class="col-12 d-flex">
+              <i class="fa fa-desktop"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Logo Design</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+            <div class="col-12 d-flex">
+              <i class="fa fa-desktop"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Illustrations</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-4 col-12 d-flex">
+          <img src="" alt="" class="imgfluid w-100 h-100">
+        </div>
+        <div class="col-lg-1"></div>
+        <div class="col-lg-3 col-12">
+          <div class="row">
+            <div class="col-12 d-flex">
+              <i class="fa fa-coffee"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Development</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+            <div class="col-12 d-flex">
+              <i class="fa fa-desktop"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Photography</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+            <div class="col-12 d-flex">
+              <i class="fa fa-desktop"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Marketing</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+            <div class="col-12 d-flex">
+              <i class="fa fa-desktop"></i>
+              <div class="cont ml-2">
+                <h5 class="tt text-bold">Support</h5>
+                <p>Laudantium montes dapibus dui eligendi do!
+                  Nemo sapien wisi cupidatat porro dapibus
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+     </div>
+     <!-- ebd alt services -->
+     <div id="value" class="carousel slide mt-content" data-interval="false">
+       <ol class="carousel-indicators">
+         <li class="active" data-target="#value" data-slide-to="0" aria-current="location"></li>
+         <li data-target="#value" data-slide-to="1"></li>
+       </ol>
+       <div class="carousel-inner alt-inner">
+         <div class="carousel-item alt-item active">
+           <img class="d-block w-100" src="" alt="">
+           <div class="carousel-caption  d-none d-flex row">
+            <div class="col-lg-4 col-4 alt-caption">
+              <i class="fa fa-magic"></i>
+              <h5 class="test-upercase">we have magic</h5>
+              <p>You will be delighted</p>
+            </div>
+            <div class="col-lg-4 col-4 alt-caption">
+              <i class="fa fa-wrench"></i>
+              <h5 class="test-upercase">we're creative</h5>
+              <p>We find the best ideas for you</p>
+            </div>
+            <div class="col-lg-4 col-4 alt-caption">
+              <i class="fa fa-music"></i>
+              <h5 class="test-upercase">we're punctual</h5>
+              <p>We always do your task on time</p>
+            </div>
+           </div>
+         </div>
+         <div class="carousel-item alt-item" >
+           <img class="d-block w-100" src="" alt="">
+           <div class="carousel-caption d-none d-md-block">
+             <h5>Title</h5>
+             <p>Text</p>
+           </div>
+         </div>
+       </div>
+     </div>
+     <!-- end value -->
+     <div id="purchase" class="carousel slide" data-ride="carousel">
+       <ol class="carousel-indicators">
+         <li class="active" data-target="#purchase" data-slide-to="0" aria-current="location"></li>
+         <li data-target="#purchase" data-slide-to="1"></li>
+       </ol>
+       <div class="carousel-inner bigstream-inner">
+         <div class="carousel-item bigstream active">
+           <div class="container">
+             <div class="row h-100 align-items-center">
+               <div class="col-6">
+                 <img src="" alt="" class="w-100">
+               </div>
+               <div class="col-1"></div>
+               <div class="col-4 d-none d-md-block">
+                <h5 class="text-uppercase">bigsstream</h5>
+             <p>Great one page template</p>
+             <p><span>
+              Pulvinar, cupiditate potenti minim nisl error
+              reprehenderit proin qui fames harum totam sagittis
+              unde fringilla! Ullamco? Pulvinar animi ullamco expedita nullam 
+             </span></p>
+             <button class="btn btn-dark">PURCHASE NOW</button>
+               </div>
+             </div>
+           </div>
+         </div>
+         <div class="carousel-item bigstream">
+          <div class="container">
+            <div class="row h-100 align-items-center">
+              <div class="col-6">
+                <img src="" alt="" class="w-100">
+              </div>
+              <div class="col-1"></div>
+              <div class="col-4 d-none d-md-block">
+               <h5 class="text-uppercase">bigsstream</h5>
+            <p>Great one page template</p>
+            <p><span>
+             Pulvinar, cupiditate potenti minim nisl error
+             reprehenderit proin qui fames harum totam sagittis
+             unde fringilla! Ullamco? Pulvinar animi ullamco expedita nullam 
+            </span></p>
+            <button class="btn btn-dark">PURCHASE NOW</button>
+              </div>
+            </div>
+          </div>
+         </div>
+       </div>
+     </div>
+     <!-- end purchase -->
+     <div class=" mt-content portfolio">
+      <div class="row">
+        <div class="col-lg-12 tt-team text-center" >
+          <div class="h4 text-uppercase">portfolio</div>
+          <p class="font-Italic">An eye for detail makes our works excellent</p>
+          <div class="inline"></div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12 gallery_filter_tab">
+          <ul class="list-inline gallery-tap text-center">
+            <li class="list-inline-item">
+              <a href="javascript:void(0);" class="filter-button active" data-filter="all">ALL </a>	
+            </li>
+            <li class="list-inline-item">
+              <a href="javascript:void(0);" class="filter-button" data-filter="branding">BRANDING</a>	
+            </li>
+            <li class="list-inline-item">
+              <a href="javascript:void(0);" class="filter-button" data-filter="design">DESIGN</a>	
+            </li>
+            <li class="list-inline-item">
+              <a href="javascript:void(0);" class="filter-button" data-filter="design">PHOTOGRAPHY</a>	
+            </li>
+          </ul>
+        </div>
+        <div class="row no-gutters">
+          <div class="col-lg-4 col-md-4 col-sm-4 text-center col-xs-6 filter Branding">
+            <img src="http://fakeimg.pl/800x365/" class="fake img-fluid">  
+            <div class="overlay">
+              <div class="text">
+                BRANDING
+                <p class="col">External Page</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 text-center col-xs-6 filter Design">
+            <img src="http://fakeimg.pl/800x365/" class=" fake img-fluid">  
+            <div class="overlay">
+              <div class="text">
+                DESIGN
+                <p class="col">External Page</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-4 col-sm-4 text-center col-xs-6 filter Photography">
+            <img src="http://fakeimg.pl/800x365/" class="fake img-fluid">  
+            <div class="overlay">
+              <div class="text">
+                PHOTOGRAPHY
+                <p class="col">External Page</p>
+              </div>
+            </div>
+          </div>
+          </div>
+       </div>
+     </div>
+     <!-- end portfolio -->
+     <div class="mt-content action">
+       <div class="h-100 w-50 m-auto d-flex align-items-center justify-content-between">
+         <div class="div">
+           <h4 class="text-white">LIKE OUR WORKS?</h4>
+           <p>WE ARE ALWAYS OPEN TO INTERESTING PROJECTS</p>
+         </div>
+         <button class="btn btn-outline-secondary">GET PRICING </button>
+       </div>
+     </div>
+     <!-- end action -->
+     <div class="container mt-content review">
+      <div class="row">
+        <div class="col-lg-12 tt-team text-center" >
+          <i class="fa fa-comments-o " ></i>
+          <div class="">People <span class="text-bold">SAY</span></div>
+          <p></p>
+          <div class="inline"></div>
+        </div>
+      </div>
+      <div class="row mt-4 justify-content-center">
+        <div id="review" class="carousel slide" data-ride="carousel">
+          <ol class="carousel-indicators">
+            <li class="active" data-target="#review" data-slide-to="0" aria-current="location"></li>
+            <li data-target="#review" data-slide-to="1"></li>
+          </ol>
+          <div class="carousel-inner">
+            <div class="carousel-item active text-center">
+              <p>An eye for detail makes our works excellent
+                An eye for detail makes our works excellent
+              </p>
+              <p class="name">Emma Joihnson, Company ime</p>
+            </div>
+            <div class="carousel-item text-center">
+              <p>An eye for detail makes our works excellent
+                An eye for detail makes our works excellent
+              </p>
+              <p class="name">Emma Joihnson, Company ime</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      </div>
+      <!-- end review -->
+      <div class="mt-content news">
+        <div class="row">
+          <div class="col-lg-12 tt-team text-center" >
+            <div class="h4 text-uppercase">our news</div>
+            <p>We share our best ideas in our blog</p>
+            <div class="inline"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-lg-3 col-3 col-sm-3  text-center" id="news">
+            <img src="img/cr1.jpeg" class="h-70 w-100" alt="">
+            <h5>NEW DESIGN TRENDS</h5>
+            <p class="name">Posted by John Dor</p>
+            <div class="date">
+              <h5>09 JULE</h5>
+              <a href="">READ MORE</a>
+            </div>
+          </div>
+          <div class="col-lg-3 col-3 col-sm-3"></div>
+          <div class="col-lg-3 col-3 col-sm-3"></div>
+          <div class="col-lg-3 col-3 col-sm-3"></div>
+        </div>
+      </div>
+      <!-- end news -->
+
   </body>
 </html>

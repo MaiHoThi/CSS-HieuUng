@@ -1,11 +1,11 @@
 /* carousel */
-.carousel {
+.carousel.carousel-parent {
   height: 36rem;
 }
-.carousel-inner {
+.carousel.carousel-parent .carousel-inner {
   max-height: 100%;
 }
-.carousel-caption {
+.carousel.carousel-parent .carousel-inner .carousel-caption {
   right: 0px !important;
   bottom: 189px;
   left: 15%;
@@ -16,7 +16,7 @@ button.btn.btn-outline-secondary {
   color: snow;
   border-radius: 20px;
 }
-.carousel-caption.d-none.d-md-block h5.lighter, p{
+.carousel-caption.d-none.d-md-block h5.lighter , p{
   color: #6B6361;
 }
 /* content */
@@ -30,9 +30,7 @@ div.mt-content {
 ul.list-inline.gallery-tap li.list-inline-item {
       padding: 33px 25px 0px 25px;
   }
-  .list-inline-item:not(:last-child, :first-child) {
-    border-top: 1px solid orange;
-  }
+
 
   .list-inline-item a:focus{
       border-radius: 5px;
@@ -47,7 +45,7 @@ ul.list-inline.gallery-tap li.list-inline-item {
     height: 31rem;
 }
 /* point */
-.col-sm-3.p-2.col-6.title.d-block.text-center.text-lg-center i.fa {
+.container.mt-content.alt i.fa,.col-sm-3.p-2.col-6.title.d-block.text-center.text-lg-center i.fa {
   color: #f31a40;
 }
 .container-fluid.services.mt-content {
@@ -83,13 +81,13 @@ ul.list-inline.gallery-tap li.list-inline-item {
     z-index: 100;
     color: snow;
 }
-.d-block.text-center p {
+ .d-block.text-center p {
   font-size: 12px;
 }
 .tt-services.d-block.text-center p {
     color: snow;
 }
-a.d-block.text-center i.fa {
+.fa-comments-o, a.d-block.text-center i.fa {
   color: #d40505fa;
   font-size: 20px;
   line-height: 36px;
@@ -98,7 +96,6 @@ a.d-block.text-center i.fa {
 
 .card-group.team-ct {
     height: 28.5rem;
-    border: 1px solid;
 }
 
 .card-group.team-ct div.card {
@@ -112,4 +109,78 @@ a.d-block.text-center i.fa {
   line-height: 8px;
   padding: 4px;
 }
+.col-lg-12.tt-team.text-center {
+  position: relative;
+}
 
+.inline {
+  position: absolute;
+  border: 1px solid orange;
+  left: 47%;
+  bottom: 0;
+  width: 90px;
+}
+/* video */
+.bigstream-inner, .carousel-inner.alt-inner, .carousel-inner.vd-inner {
+  height: 17em;
+}
+.bigstream, .carousel-item.vd-item, .carousel-item.alt-item {
+  max-height: 100%;
+}
+i.fa.fa-play-circle-o.fa-lg {
+  font-size: 63px;
+  color: snow;
+ } 
+ .modal-backdrop {
+  background-color: transparent;
+}
+.modal {
+  top: 53px !important;
+}
+/* alt services */
+.alt-caption .fa{
+  font-size: 50px;
+}
+.carousel-captioncol-lg-3.col-md-3.col-3.d-none.d-md-block {
+  font-size: 13px;
+}
+
+.carousel-captioncol-lg-3.col-md-3.col-3.d-none.d-md-block p span {
+  color: #808080c7;
+}
+button.btn.btn-dark {
+  border-radius: 30px;
+  font-size: 13px;
+}
+/* portfolio */
+.fake{
+  border: 1px solid gray;
+}
+/* action */
+.mt-content.action{
+  height: 10em;
+  background-color: black;
+}
+.mt-content.action button {
+  padding: .675rem 2.75rem;
+  background: snow;
+  border-radius: 0;
+  color: black;
+  font-size: 13px;
+  font-weight: bold;
+}
+/* review */
+div#review {
+  height: 6em;
+}
+i.fa.fa-comments-o {
+  font-size: 30px;
+}
+p.name{
+  font-size: 13px;
+}
+/* news */
+#news{
+  height: 20rem;
+  border: 1px solid gray;
+}
