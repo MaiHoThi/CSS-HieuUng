@@ -55,6 +55,61 @@ a:hover{
 div.mt-content {
   margin-top: 6em;
 }
+/* our story */
+.col-lg-6.col-12.sto-ct {
+  padding-left: 0;
+  position: relative;
+  text-align: left;
+}
+
+.col-lg-6.col-12.sto-ct .inline-div:nth-child(1) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1px solid;
+  width: 90%;
+}
+
+.col-lg-6.col-12.sto-ct:nth-child(2) .inline-div {
+  width: 75% !important;
+}
+
+.col-lg-6.col-12.sto-ct:nth-child(3) .inline-div {
+  width: 80%;
+}
+
+.col-lg-6.col-12.sto-ct:nth-child(4) .inline-div {
+  width: 85%;
+}
+p.percent {
+  text-align: center;
+  width: 25px;
+  position: absolute;
+  top: -11px;
+  right: 43px;
+  padding: 2px;
+  border: 1px solid;
+  border-radius: 50%;
+  background: black;
+  color: snow;
+  height: 25px;
+}
+
+p.percent:nth-child(4) {
+  right: 57px;
+}
+
+.col-lg-6.col-12.sto-ct:nth-child(2) p.percent {
+  right: 123px;
+}
+
+.col-lg-6.col-12.sto-ct:nth-child(3) p.percent {
+  right: 94px;
+}
+
+.col-lg-6.col-12.sto-ct:nth-child(4) p.percent {
+  right: 66px;
+}
 /* Introduction */
 ul.list-inline.gallery-tap li.list-inline-item {
       padding: 33px 25px 0px 25px;
