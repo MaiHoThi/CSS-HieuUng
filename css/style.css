@@ -217,7 +217,14 @@ transform: translate3d(0,-13px,0);
   position: absolute;
   bottom: 0;
   left: 34%;
+}
+.cont.ml-2 p,
+.col-lg-4.brand.col-6.d-block.text-center a,
+.carousel-captioncol-lg-3.col-md-3.col-3.d-none.d-md-block,
+button.btn.btn-dark,.mt-content.action button
+{
   font-size: 13px;
+
 }
 
 .col-lg-4.brand.col-6.d-block.text-center:hover a{
@@ -323,7 +330,7 @@ i.fa.fa-play-circle-o.fa-lg {
 .modal {
   top: 53px !important;
 }
-/* alt services */
+/* alt services ------------------------------------*/
 .carousel-item.alt-item.active {
   background-image: url("https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940");
   background-size: cover;
@@ -332,9 +339,7 @@ i.fa.fa-play-circle-o.fa-lg {
 .alt-caption .fa{
   font-size: 50px;
 }
-.carousel-captioncol-lg-3.col-md-3.col-3.d-none.d-md-block {
-  font-size: 13px;
-}
+
 img.imgfluid.w-100 {
   height: 34rem;
 }
@@ -343,9 +348,39 @@ img.imgfluid.w-100 {
 }
 button.btn.btn-dark {
   border-radius: 30px;
-  font-size: 13px;
 }
-/* portfolio */
+/* hover */
+.col-12.alt-brand.d-flex:hover {
+  transition:0.5s;
+ transform: rotateX(25deg);
+   background: #b3b0b0b5;
+}
+
+
+
+.col-12.alt-brand.d-flex a {
+   width: 44%;
+   bottom: -10px;
+   border-radius: 20px;
+   position: absolute;
+   font-size: 13px;
+   padding: 0;
+   opacity: 0;
+}
+.col-12.alt-brand.d-flex:hover a{
+ opacity:1;
+}
+.col-12.alt-brand.d-flex {
+   position: relative;
+}
+/* bigstream */
+.carousel-inner.bigstream-inner {
+  background: #ada9a952;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+/* portfolio ----------------------------*/
 .fake{
   border: 1px solid gray;
 }
@@ -359,7 +394,6 @@ button.btn.btn-dark {
   background: snow;
   border-radius: 0;
   color: black;
-  font-size: 13px;
   font-weight: bold;
 }
 /* review */
