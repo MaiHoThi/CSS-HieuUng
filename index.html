@@ -653,14 +653,14 @@
      </div>
      <!-- end purchase -->
      <div class=" mt-content portfolio">
-      <div class="row">
+      <div class="row w-100 m-0">
         <div class="col-lg-12 tt-team text-center" >
           <div class="h4 text-uppercase">portfolio</div>
           <p class="font-Italic">An eye for detail makes our works excellent</p>
           <div class="inline"></div>
         </div>
-      </div>
-      <div class="row">
+      <!-- </div>
+      <div class="row w-100 m-0"> -->
         <div class="col-lg-12 gallery_filter_tab">
           <ul class="list-inline gallery-tap text-center">
             <li class="list-inline-item">
@@ -684,13 +684,13 @@
 					var value = $(this).attr('data-filter');
 					if(value == "all")
 					{ 
-						$('.filter').show();
+						$('.filter').show('1000');
 					}
        
 					else
 					{ 
-						$(".filter").not('.'+value).hide();
-						$('.filter').filter('.'+value).show();
+						$(".filter").not('.'+value).hide('3000');
+						$('.filter').filter('.'+value).show('3000');
 					}
 					if ($(".filter-button").removeClass("active")) {
 						$(this).addClass("active");
@@ -832,22 +832,22 @@
       <!-- end review -->
       <div class="container mt-content">
         <div class="row">
-          <div class="col-lg-3"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
-          <div class="col-lg-3"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
-          <div class="col-lg-3"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
-          <div class="col-lg-3"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
+          <div class="col-lg-3 col-sm-3 col-6"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
+          <div class="col-lg-3 col-sm-3 col-6"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
+          <div class="col-lg-3 col-sm-3 col-6"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
+          <div class="col-lg-3 col-sm-3 col-6"><img src="http://fakeimg.pl/400x100/" alt="logo partner" class="img-fluid"></div>
         </div>
       </div>
       <!-- end partner -->
       <div class="mt-content news">
-        <div class="row">
+        <div class="row w-100">
           <div class="col-lg-12 tt-team text-center" >
             <div class="h4 text-uppercase">our news</div>
             <p>We share our best ideas in our blog</p>
             <div class="inline"></div>
           </div>
         </div>
-        <div class="row">
+        <div class="row w-100">
           <div class="col-lg-3 col-3 col-sm-3  text-center" id="news">
             <div class="nen"></div>
             <img src="img/cr1.jpeg" class="h-70 w-100 m-auto" alt="">
