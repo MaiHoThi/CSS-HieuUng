@@ -115,9 +115,15 @@ img.imgfluid.w-100{
   border: none;
 }
 .footer.container .col-12 form {margin-bottom: 10px;}
+.carousel.carousel-parent .carousel-inner .carousel-item{
+  height: auto !important;
+}
 }
 /* ------------------reponsive ipad------------------------------- */
 @media(min-width:36em) and (max-width:48em){
+  .carousel.carousel-parent .carousel-inner .carousel-item{
+    height: auto !important;
+  }
   .footer .row .col-lg-3.col-12.col-sm-3 {
     padding: 0;
 }
@@ -167,6 +173,7 @@ img.imgfluid.w-100 {
   margin: auto;
 }
 }
+
 /* menu */
 div#my-nav {
   justify-content: flex-end !important;
@@ -190,7 +197,7 @@ div#my-carousel:hover a.carousel-control-next{
 div#my-carousel:hover a.carousel-control-prev{
   left:50px !important;
 }
-.carousel.carousel-parent {
+.carousel.carousel-parent .carousel-inner .carousel-item{
   height: 38rem;
 }
 .carousel.carousel-parent .carousel-inner {
@@ -198,7 +205,7 @@ div#my-carousel:hover a.carousel-control-prev{
 }
 .carousel.carousel-parent .carousel-inner .carousel-caption {
   right: 0px !important;
-  bottom: 189px;
+  bottom: 189px ;
   left: 15%;
   text-align: left;
 }
@@ -736,7 +743,7 @@ button.btn.btn-dark {
 
 .mb-4.col-12.alt-brand.justify-content-between.d-flex:hover {
   transform: rotatex(20deg);
-  background: #6f5c5c75;
+  background: #a9a9a98c;
   transition: 0.35s;
 }
 /* bigstream --------------------------*/
