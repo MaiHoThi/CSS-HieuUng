@@ -120,25 +120,25 @@
         <div class="col-lg-12 gallery_filter_tab">
           <ul class="list-inline gallery-tap text-center">
             <li class="list-inline-item">
-              <a href="javascript:void(0);" id="active_main" class="filter-button active" data-filter="about">ABOUT</a>	
+              <a href="javascript:void(0);" id="active_main about" class="filter-button active" data-filter="about">ABOUT</a>	
             </li>
             <li class="list-inline-item">
-              <a href="javascript:void(0);" class="filter-button" data-filter="Skills">SKILLS</a>	
+              <a href="javascript:void(0);" class="filter-button skill" data-filter="Skills" >SKILLS</a>	
             </li>
             <li class="list-inline-item">
-              <a href="javascript:void(0);" class="filter-button" data-filter="Process">PROCESS</a>	
+              <a href="javascript:void(0);" class="filter-button process" data-filter="Process">PROCESS</a>	
             </li>
           </ul>
         </div>
        </div>
        <div class="row no-gutters">
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-16 filter about" id="about" >
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-16 filter about" id="about" style="display: block;">
               <p >Voluptatem odio cillum ullamco nulla, class. Ullam dictum aliquam vehicula totam consectetur, 
                 dignissim omnis lacus fugiat! Duis,imperdiet, cillum iure, porta accumsan tempore explicabo.
                 Semper dignissimos officia, exercitationem ratione officia ornare error, nec expedita, nullam 
               </p>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-16 filter Skills" id="skill" >
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-16 filter Skills" id="skill" style="display:none">
             <div class=" m-auto w-100 row">
               <div class="col-lg-6 col-12 sto-ct">
                 <div class="inline-div"></div>
@@ -162,7 +162,7 @@
               </div>
             </div>
           </div>
-          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-16 filter Process " id="process" >
+          <div class="col-lg-12 col-md-12 col-sm-12 col-xs-16 filter Process " id="process" style="display:none">
             <div class="row">
               <div class="col-lg-3 col-12">
                 <h2 class="no">1</h2>
@@ -672,8 +672,6 @@
           <p class="font-Italic">An eye for detail makes our works excellent</p>
           <div class="inline"></div>
         </div>
-      <!-- </div>
-      <div class="row w-100 m-0"> -->
         <div class="col-lg-12 gallery_filter_tab">
           <ul class="list-inline gallery-tap text-center">
             <li class="list-inline-item">
@@ -692,10 +690,10 @@
         </div>
         <script>
           window.onload = function(){
-            document.getElementById("about").click();
+            document.getElementById("#all").click();
           }
-          $(document).ready(function(){
 
+          $(document).ready(function(){
 				$(".filter-button").click(function(){
 					var value = $(this).attr('data-filter');
 					if(value == "all")
