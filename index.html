@@ -13,6 +13,9 @@
     
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="fonts/css/font-awesome.css">
+    <script src="js/jquery-3.1.1.min.js"></script>
+    <script src="js/videopopup.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/videopopup.css" media="screen" />
   </head>
   <body >
      <nav class="navbar navbar-expand-lg navbar-light bg-light" id="top">
@@ -383,71 +386,71 @@
       </div>
      </div>
      <!-- end team -->
-     <div id="vd-carousel " class="mt-content carousel carousel-intro slide" data-ride="true">
-       <ol class="carousel-indicators">
-         <li class="active" data-target="#vd-carousel" data-slide-to="0" aria-current="location"></li>
-         <li data-target="#vd-carousel" data-slide-to="1"></li>
-       </ol>
+     <div class="video mt-content">
+     <div id="vdcarousel " class="carousel slide" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li class="active" data-target="#vdcarousel" data-slide-to="0" aria-current="location"></li>
+        <li data-target="#vdcarousel" data-slide-to="1"></li>
+      </ol>
        <div class="carousel-inner vd-inner">
-         <div class="carousel-item vd-item active">
-           <img class="d-block h-30 w-100" src="img/cr1.jpeg" alt="">
-           <div class="carousel-caption d-block">
-            <p type="button" data-toggle="modal" data-src="https://vod-progressive.akamaized.net/exp=1619684941~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F3821%2F15%2F394106385%2F1672687082.mp4~hmac=df046b66579d924bcc64c8ec62b91961b2590f13940ec033a30aaabcc8769fb5/vimeo-prod-skyfire-std-us/01/3821/15/394106385/1672687082.mp4?filename=production+ID%3A3816531.mp4" 
-            class="video-btn" data-target="#myModal">
-            <i class=" fa fa-play-circle-o fa-lg"></i>
-           </p>
+         <div class="carousel-item text-center  vd-item active">
+            <span type="button" data-toggle="modal" data-src="https://youtu.be/lK2nUoT5gpo" 
+            class="video-btn text-center" data-target="#myModal">             
+              <i  class=" fa fa-play-circle-o fa-lg"></i>
+            </span>
+            </a>
              <h5 class=" text-uppercase">introducing</h5>
              <p>Check out our video prisentation</p>
-            <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-              <div class="modal-dialog" role="document">
-                <div class="modal-content">
-                  <div class="modal-body">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                      <span aria-hidden="true">&times;</span>
-                    </button>        
-                    <!-- 16:9 aspect ratio -->
-                    <div class="embed-responsive embed-responsive-16by9">
-                      <iframe class="embed-responsive-item" src="" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
-                    </div>
-                  </div>
+         </div>
+         <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog" role="document">
+            <div class="modal-content">
+              <div class="modal-body">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>        
+                <!-- 16:9 aspect ratio -->
+                <div class="embed-responsive embed-responsive-16by9">
+                  <iframe class="embed-responsive-item" src="https://youtu.be/lK2nUoT5gpo" id="video"  allowscriptaccess="always" allow="autoplay"></iframe>
                 </div>
               </div>
-            </div> 
+            </div>
+          </div>
+        </div> 
+        <script>
+          $(document).ready(function() {
+          var $videoSrc;  
+          $('.video-btn').click(function() {
+              $videoSrc = $(this).data( "src" );
+          });
+          console.log($videoSrc);
+      
             
-      <script>
-
-        $(document).ready(function() {
-        var $videoSrc;  
-        $('.video-btn').click(function() {
-            $videoSrc = $(this).data( "src" );
-        });
-        console.log($videoSrc);
-    
-          
-        $('#myModal').on('shown.bs.modal', function (e) {
-            
-        $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
-        })
-    
-        $('#myModal').on('hide.bs.modal', function (e) {
-            // a poor man's stop video
-            $("#video").attr('src',$videoSrc); 
-        }) 
-    
-        });
-    
-    
-      </script>
-           </div>
-         </div>
-         <div class="carousel-item vd-item">
-           <img class="d-block w-100" src="img/cr2.jpeg" alt="">
-           <div class="carousel-caption d-none d-md-block">
-             <h5>Title</h5>
-             <p>Text</p>
-           </div>
+          $('#myModal').on('shown.bs.modal', function (e) {
+              
+          $("#video").attr('src',$videoSrc + "?autoplay=1&amp;modestbranding=1&amp;showinfo=0" ); 
+          })
+      
+          $('#myModal').on('hide.bs.modal', function (e) {
+              // a poor man's stop video
+              $("#video").attr('src',$videoSrc); 
+          }) 
+      
+          });
+      
+      
+        </script>
+         <div class="carousel-item text-center vd-item">
+          <span type="button" data-toggle="modal" data-src="https://youtu.be/lK2nUoT5gpo" 
+          class="video-btn d-inline-flex align-items-center justify-content-center" data-target="#myModal">             
+            <i  class=" fa fa-play-circle-o fa-lg"></i>
+          </span>
+          </a>
+           <h5 class=" text-uppercase">introducing</h5>
+           <p>Check out our video prisentation</p>
          </div>
        </div>
+     </div>
      </div>
      <!-- end video -->
      <div class="container mt-content alt">
@@ -689,7 +692,7 @@
         </div>
         <script>
           window.onload = function(){
-            document.getElementById("active_main").click();
+            document.getElementById("about").click();
           }
           $(document).ready(function(){
 
@@ -823,6 +826,8 @@
           <ol class="carousel-indicators">
             <li class="active" data-target="#review" data-slide-to="0" aria-current="location"></li>
             <li data-target="#review" data-slide-to="1"></li>
+            <li data-target="#review" data-slide-to="2"></li>
+
           </ol>
           <div class="carousel-inner">
             <div class="carousel-item active text-center">
@@ -837,6 +842,7 @@
               </p>
               <p class="name">Emma Joihnson, Company ime</p>
             </div>
+            
           </div>
         </div>
       </div>

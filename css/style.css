@@ -1,10 +1,18 @@
 @media(max-width:35.5em){
+  .carousel-item.vd-item h5 {
+    font-size: 16px !important;
+}
+.carousel-inner.vd-inner .carousel-item {
+  padding: 29px 0px;
+}
+
   .col-lg-4.col-sm-5.col-7.d-none.d-block.d-md-block h5,
   .col-lg-4.col-sm-5.col-7.d-none.d-block.d-md-block p, 
   .col-lg-4.col-sm-5.col-7.d-none.d-block.d-md-block button {
     padding-left: 0;
     font-size: 9px;
 }
+
 button.btn.btn-dark {
   margin-bottom: 37px;
   border-radius: 0px !important;
@@ -119,6 +127,7 @@ img.imgfluid.w-100{
   height: auto !important;
 }
 }
+
 /* ------------------reponsive ipad------------------------------- */
 @media(min-width:36em) and (max-width:48em){
   .carousel.carousel-parent .carousel-inner .carousel-item{
@@ -173,7 +182,11 @@ img.imgfluid.w-100 {
   margin: auto;
 }
 }
-
+/* ----------------------------------------------------------------- */
+.carousel-inner.vd-inner .carousel-item h5{
+  color: snow;
+  font-weight: bold;
+}
 /* menu */
 div#my-nav {
   justify-content: flex-end !important;
@@ -321,6 +334,14 @@ ul.list-inline.gallery-tap li.list-inline-item {
   .list-inline-item a.active{
     cursor: default;
   }
+  
+  .carousel-inner.vd-inner {
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    background-image: url('https://cdn.pixabay.com/photo/2018/01/30/13/42/venice-3118803_960_720.jpg');
+    align-items: center;
+}
 
 /* point */
 .container.mt-content.alt i.fa,
@@ -459,13 +480,15 @@ i.fa.fa-play-circle-o.fa-lg {
   font-size: 63px;
   color: snow;
  } 
- .modal-backdrop {
-  background-color: transparent;
-}
-.modal {
-  top: 53px !important;
+ #headerPopup{
+  width:75%;
+  margin:0 auto;
 }
 
+#headerPopup iframe{
+  width:100%;
+  margin:0 auto;
+}
 
 /* portfolio ----------------------------*/
 .fake{
